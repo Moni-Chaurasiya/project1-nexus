@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <style>
+        body {
+            background: url('S-1.jpeg');
+            background-repeat: no-repeat;
+            background-size: 1550px 1200px;
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        .btn {
+            display: inline-block;
+            /*  padding: 15px 30px;*/
+            padding-bottom: 15px;
+            padding-top: 8px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+
+            height: 52px;
+        }
+
+        @media (min-width: 400px) {
+
+            .login-page,
+            .signup-page,
+            .forgotPassword-page {
+                display: none;
+                background: transparent;
+                border: 3px solid #007bff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                margin: 0 auto;
+                overflow: hidden;
+
+
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .login-page,
+            .signup-page,
+            .forgotPassword-page {
+                display: none;
+                background: transparent;
+                border: 3px solid #007bff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                margin: 0 auto;
+                overflow: hidden;
+                margin-top: 96px;
+
+
+            }
+        }
+
+
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
+
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 3px solid #007bff;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #97c8fc;
+        }
+
+        .btn-1 {
+            background-color: palevioletred;
+            color: black;
+            border: 3px solid #007bff;
+        }
+
+        .btn-2 {
+            background-color: rgb(135, 223, 4);
+            color: black;
+            border: 3px solid #007bff;
+        }
+
+        .btn-1:hover {
+            background-color: rgb(225, 65, 118);
+        }
+
+        .btn-2:hover {
+            background-color: rgb(94, 154, 3);
+        }
+
+        .box {
+            padding-left: 5px;
+            color: #007bff;
+
+        }
+
+
+        .box:hover {
+            text-decoration: underline;
+            color: red;
+            cursor: pointer;
+        }
+
+
+        .box2 {
+            display: flex;
+            justify-content: center;
+            color: yellow;
+            width: 100%;
+
+        }
+
+        @media (min-width: 680px) {
+            .navbar li {
+                float: left;
+                list-style: none;
+                padding: 6px;
+                padding-bottom: 5px;
+                display: none;
+                margin: 15px;
+                text-decoration: none;
+                font-size: xx-large;
+                color: #007bff;
+                position: relative;
+            }
+        }
+
+        @media (min-width: 680px) {
+            .navigation li {
+                float: left;
+                list-style: none;
+                padding: 6px;
+                padding-bottom: 5px;
+                display: block;
+                margin: 15px;
+                text-decoration: none;
+                font-size: xx-large;
+                color: #007bff;
+                position: relative;
+            }
+        }
+
+
+        li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+
+
+        .box3 {
+            padding-right: 5px;
+
+        }
+
+
+        .myImage {
+            width: 28px;
+            height: auto;
+            cursor: pointer;
+            position: right top;
+            float: inline-end;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+
+
+        .myImage2 {
+            width: 96px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+
+        .myImage3 {
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            position: left top;
+            float: inline-start;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            display: none;
+        }
+
+
+        .btn-3 {
+            background-color: rgb(168, 97, 3);
+            color: black;
+            border: 3px solid #007bff;
+        }
+
+
+        .btn-3:hover {
+            background-color: rgb(139, 139, 1);
+        }
+
+
+        h4 {
+            color: yellow;
+        }
+
+
+        ::placeholder {
+            color: #022852;
+        }
+
+        @media (max-width: 680px) {
+            .myImage3 {
+                display: block;
+            }
+
+            li {
+                display: none;
+            }
+
+            nav button {
+                float: inline-end;
+            }
+
+            nav ul {
+                background-color: rgb(2, 61, 84);
+                border: 2px solid #007bff;
+                border-radius: 10px;
+                position: fixed;
+                top: 25px;
+
+                left: 0;
+                width: 150px;
+                height: 100vh;
+                padding-top: 50px;
+            }
+
+            .navbar li {
+                float: left;
+                list-style: none;
+                padding: 6px;
+                padding-bottom: 5px;
+                display: block;
+                margin-right: 10px;
+                text-decoration: none;
+                font-size: x-large;
+                color: #e3e8ed;
+                position: relative;
+            }
+
+            li:hover {
+                text-decoration: underline;
+                cursor: pointer;
+
+            }
+
+
+            .container {
+                padding-top: 100px;
+            }
+
+            .myImage4 {
+                display: block;
+                width: 28px;
+                height: auto;
+                cursor: pointer;
+                position: right top;
+                float: top;
+                border: 2px solid #007bff;
+                border-radius: 5px;
+                margin-left: 32px;
+                margin-top: 5px;
+            }
+
+            .navigation li {
+                float: left;
+                list-style: none;
+                padding: 6px;
+                padding-bottom: 5px;
+                display: none;
+                margin: 15px;
+                text-decoration: none;
+                font-size: xx-large;
+                color: #007bff;
+                position: relative;
+            }
+
+        }
+
+
+
+        @media (min-width: 680px) {
+            .myImage4 {
+                display: none;
+
+            }
+
+            #sidemenu {
+                display: none;
+            }
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <ul class="navigation">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Service</li>
+        </ul>
+
+        <nav class="navbar">
+            <img class="myImage3" src="S-5.png" alt="" onclick="openmenu()">
+            <ul id="sidemenu">
+                <img class="myImage4" src="S-2.jpg" alt="" onclick="remove()">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Service</li>
+            </ul>
+
+            <button class="btn btn-2" onclick="showSignup()">Signup</button>
+            <button class="btn btn-1" onclick="showLogin()">Login</button>
+
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <div class="login-page" id="loginPage">
+            <img class="myImage" src="S-2.jpg" alt="" onclick="remove()">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <p class="box2"><span class="box3"><input type="checkbox"></span>Remember me </p>
+                <div class=" box box2" onclick="forgotPassword()">Forgot Password?</div>
+                <button type="submit" class="btn btn-1">Login</button>
+                <div class="box2">Don't have an account? <span class="box" onclick="showSignup()">Signup</span></div>
+            </form>
+        </div>
+
+        <div class="signup-page" id="signupPage">
+            <img class="myImage" src="S-2.jpg" alt="" onclick="remove()">
+            <h2>Signup</h2>
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder=" Confirm Password" required>
+                <p class="box2"><span class="box3"> <input type="checkbox" required></span>I agree to the terms &
+                    conditions</p>
+                <button type="submit" class="btn btn-2">Signup</button>
+                <div class="box2">Already have an account? <span class="box" onclick="showLogin()"> Login</span></div>
+            </form>
+        </div>
+
+        <div class="forgotPassword-page" id="forgotPasswordPage">
+            <img class="myImage" src="S-2.jpg" alt="" onclick="remove()">
+            <img class="myImage2" src="S-3.jpeg" alt="">
+            <img class="myImage2" src="S-4.jpeg" alt="">
+
+            <h2>Forgot Your Password?</h2>
+            <h4>Enter your email below to reset your password</h4>
+
+            <form>
+                <input type="email" placeholder="Type Your Email" required>
+                <h2>Reset Your Password</h2>
+                <form>
+                    <input type="password" placeholder="New Password" required>
+                    <input type="password" placeholder=" Confirm Password" required>
+                    <button type="submit" class="btn btn-3">Done</button>
+                </form>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginPage').style.display = 'block';
+            document.getElementById('signupPage').style.display = 'none';
+            document.getElementById('forgotPasswordPage').style.display = 'none';
+            document.getElementById('sidemenu').style.display = 'none';
+
+        }
+
+        function showSignup() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('signupPage').style.display = 'block';
+            document.getElementById('forgotPasswordPage').style.display = 'none';
+            document.getElementById('sidemenu').style.display = 'none';
+
+        }
+
+        function remove() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('signupPage').style.display = 'none';
+            document.getElementById('forgotPasswordPage').style.display = 'none';
+            document.getElementById('sidemenu').style.display = 'none';
+
+        }
+
+        function forgotPassword() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('signupPage').style.display = 'none';
+            document.getElementById('forgotPasswordPage').style.display = 'block';
+            document.getElementById('sidemenu').style.display = 'none';
+
+        }
+
+        function openmenu() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('signupPage').style.display = 'none';
+            document.getElementById('forgotPasswordPage').style.display = 'none';
+            document.getElementById('sidemenu').style.display = 'block';
+
+        }
+
+    </script>
+
+</body>
+
+</html>
